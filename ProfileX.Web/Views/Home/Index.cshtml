@@ -17,7 +17,7 @@
     <header class="main-header">
         <div class="container">
             <nav class="main-nav">
-                <a href="#home" class="logo">Adınız Soyadınız</a>
+                <a href="#home" class="logo">Abdullah Arıcı</a>
                 <ul>
                     <li><a href="#about">Hakkımda</a></li>
                     <li><a href="#experience">Deneyim</a></li>
@@ -44,13 +44,10 @@
             <div class="container">
                 <h2>Hakkımda</h2>
                 <div class="about-content">
-                    <img src="img/profile.jpg" alt="Profil Fotoğrafınız" class="profile-img">
-                    <p>
+                     <p>
                         Erciyes Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Yazılım geliştirmeye küçük projelerle başladım, zamanla .NET Core dünyasında derinleştim. Şu anda .NET 8, Entity Framework Core, MSSQL, JWT, RabbitMQ, Docker gibi teknolojilerle çalışıyorum.
 
-                        Ana projem olan UniSystem üzerinde aktif olarak geliştiriyorum. Bu proje öğrenci bilgilendirme sistemi olup; akademik modüller, AI destekli mesajlaşma sistemleri, mobil uygulama tarafında ise .NET MAUI ile geliştiriliyor.
-                        Ayrıca background service, async mimari, API-first yaklaşımı ve modern UI/UX konularında da kendimi geliştiriyorum. Son zamanlarda AI, LLM, Semantic Kernel, AutoGen, Hugging Face gibi yapay zeka teknolojilerine de yöneldim.
-
+                        Son zamanlarda AWS teknolojilerine merak salmış durumdayım.
                         Yazılımı sadece kod değil, mantık ve mimari olarak da öğrenmeye çalışıyorum. Yeni teknolojilere meraklıyım, elimden geldiğince üretmeye ve paylaşmaya çalışıyorum.
 
                     </p>
@@ -75,29 +72,79 @@
                 </div>
             </div>
         </section>
-
         <section id="projects" class="section-padding">
             <div class="container">
                 <h2>Projeler</h2>
                 <div class="project-grid">
+
                     <div class="project-card">
-                        <img src="img/project1.jpg" alt="Proje 1 Görseli">
-                        <h3>Proje Adı 1</h3>
-                        <p>Bu proje hakkında kısa bir açıklama. Hangi teknolojileri kullandığınızı ve projenin amacını belirtin.</p>
+                        <img src="img/unis.png" alt="Öğrenci Bilgilendirme Sistemi">
+                        <h3>Öğrenci Bilgilendirme Sistemi (API & Frontend)</h3>
+                        <p>Öğrenci, akademisyen ve admin modüllerinden oluşan kapsamlı bir akademik yönetim sistemidir. Ders yönetimi, not sorgulama, staj başvurusu, mezuniyet şartları kontrolü, bilimsel bilgi yönetimi ve veritabanıyla sohbet gibi işlevleri içerir.</p>
+                        <div class="project-techs">
+                            <span>.NET 8</span><span>Entity Framework Core</span><span>MSSQL</span><span>JWT</span><span>RabbitMQ</span><span>Docker</span><span>GroqAI</span><span>Bootstrap</span><span>Ajax</span><span>BackgroundService</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Detayları Gör</a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="img/eru_obs.png" alt="Erciyes Üni. OBS Giriş">
+                        <h3>Erciyes Üniversitesi OBS Giriş (Web Scraping)</h3>
+                        <p>Web scraping ile Erciyes Üniversitesi Öğrenci Bilgi Sistemi'ne (OBS) giriş yapıp öğrencilerin bilgilerini çeken ve görüntüleyen bir .NET Core projesi geliştirdim.</p>
+                        <div class="project-techs">
+                            <span>.NET Core</span><span>Web Scraping</span>
+                        </div>
                         <a href="#" class="btn btn-secondary">Detayları Gör</a>
                     </div>
                     <div class="project-card">
-                        <img src="img/project2.jpg" alt="Proje 2 Görseli">
-                        <h3>Proje Adı 2</h3>
-                        <p>Bu proje hakkında kısa bir açıklama. Hangi teknolojileri kullandığınızı ve projenin amacını belirtin.</p>
+                        <img src="img/plc.jpg" alt="Web Albüm-Şarkı Tanıtım">
+                        <h3>Bilimsel Platformları birleştiren Web </h3>
+                        <p>Üç farklı bilimsel makale yayınlayan platformdan web scrabing ile verilerin elde edilip, ai ile ilgili makalenin özetinin gösterilmesi</p>
+                        <div class="project-techs">
+                            <span>MVC</span><span>Web Scrabing</span><span>.Net Core</span><span>Gemini AI entegrasyon</span>
+                        </div>
                         <a href="#" class="btn btn-secondary">Detayları Gör</a>
                     </div>
                     <div class="project-card">
-                        <img src="img/project3.jpg" alt="Proje 3 Görseli">
-                        <h3>Proje Adı 3</h3>
-                        <p>Bu proje hakkında kısa bir açıklama. Hangi teknolojileri kullandığınızı ve projenin amacını belirtin.</p>
+                        <img src="img/plc.jpg" alt="Web Albüm-Şarkı Tanıtım">
+                        <h3>Web Albüm-Şarkı Tanıtım MVC Projesi</h3>
+                        <p>Dapper ORM ve Katmanlı Mimari prensipleriyle geliştirilmiş, web tabanlı bir albüm ve şarkı tanıtım MVC projesi.</p>
+                        <div class="project-techs">
+                            <span>MVC</span><span>Dapper</span><span>Katmanlı Mimari</span>
+                        </div>
                         <a href="#" class="btn btn-secondary">Detayları Gör</a>
                     </div>
+
+                    <div class="project-card">
+                        <img src="img/plc.jpg" alt="Ticari Otomasyon">
+                        <h3>Web MVC Ticari Otomasyon</h3>
+                        <p>Entity Framework ve Katmanlı Mimari kullanarak tasarlanmış, temel düzeyde API entegrasyonuna sahip bir web tabanlı ticari otomasyon sistemi.</p>
+                        <div class="project-techs">
+                            <span>MVC</span><span>Entity Framework</span><span>Katmanlı Mimari</span><span>API (Temel Düzey)</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Detayları Gör</a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="img/plc.jpg" alt="RestAPI Login">
+                        <h3>RestAPI Login & Captcha Çözme MVC Projesi</h3>
+                        <p>RestAPI kullanarak güvenli login işlemi gerçekleştiren, captcha çözen ve ilgili verileri çekme yeteneğine sahip bir MVC projesi.</p>
+                        <div class="project-techs">
+                            <span>MVC</span><span>RestAPI</span><span>Captcha Çözme</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Detayları Gör</a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="img/plc.jpg" alt="Ağ Topolojisi">
+                        <h3>Cisco Packet Tracer Ağ Topolojisi Projesi</h3>
+                        <p>Cisco Packet Tracer kullanılarak router, switch, server ve VLAN konfigürasyonlarını içeren, detaylı bir ağ topolojisi projesi gerçekleştirdim.</p>
+                        <div class="project-techs">
+                            <span>Cisco Packet Tracer</span><span>Router</span><span>Switch</span><span>VLAN</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Detayları Gör</a>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -106,51 +153,72 @@
             <div class="container">
                 <h2>Yetenekler</h2>
                 <div class="skills-grid">
+
+                    <!-- Backend Teknolojileri -->
                     <div class="skill-item">
-                        <h3>HTML5 & CSS3</h3>
-                        <p>Web standartlarına uygun, duyarlı ve modern arayüzler geliştirme.</p>
+                        <h3>.NET 8 & ASP.NET Core</h3>
+                        <p>Modüler, API-first mimaride backend sistemler ve web servisleri geliştirme.</p>
                     </div>
                     <div class="skill-item">
-                        <h3>JavaScript (ES6+)</h3>
-                        <p>Dinamik ve etkileşimli web uygulamaları oluşturma.</p>
+                        <h3>Entity Framework Core</h3>
+                        <p>Code-first yaklaşımla veritabanı tasarımı ve ilişkisel veri yönetimi.</p>
                     </div>
                     <div class="skill-item">
-                        <h3>[Yetenek Adı]</h3>
-                        <p>[Yetenek Açıklaması]</p>
+                        <h3>JWT</h3>
+                        <p>Güvenli token tabanlı kimlik doğrulama sistemleri oluşturma.</p>
                     </div>
                     <div class="skill-item">
-                        <h3>[Yetenek Adı]</h3>
-                        <p>[Yetenek Açıklaması]</p>
+                        <h3>Background Services</h3>
+                        <p>Arka planda sürekli çalışan servisler ile zamanlanmış görevler ve otomasyon işlemleri geliştirme.</p>
                     </div>
+
+               
+                    <div class="skill-item">
+                        <h3>HTML5, CSS3 & Bootstrap</h3>
+                        <p>Duyarlı, modern ve erişilebilir kullanıcı arayüzleri geliştirme.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>AJAX</h3>
+                        <p>Dinamik içerikler ve API entegrasyonlarıyla kullanıcı etkileşimi sağlama.</p>
+                    </div>
+
+                     <div class="skill-item">
+                        <h3>Docker</h3>
+                        <p>Projeleri izole ortamlarda çalıştırmak ve ortam bağımsız dağıtımlar yapmak.</p>
+                    </div>
+                     <div class="skill-item">
+                        <h3>AWS EC2</h3>
+                        <p>Projeleri AWS ortamında yayınlama</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>RabbitMQ</h3>
+                        <p>Asenkron mesajlaşma altyapısı kurarak servisler arası veri iletişimi sağlama.</p>
+                    </div>
+
+                  
+ 
+
+          
+                    <div class="skill-item">
+                        <h3>Microsoft SQL Server</h3>
+                        <p>Performanslı veri sorgulama, optimizasyon ve veri modelleme.</p>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section-padding">
-            <div class="container">
-                <h2>İletişim</h2>
-                <p>Benimle iletişime geçmekten çekinmeyin!</p>
-                <form class="contact-form">
-                    <input type="text" placeholder="Adınız Soyadınız" required>
-                    <input type="email" placeholder="E-posta Adresiniz" required>
-                    <textarea placeholder="Mesajınız" rows="6" required></textarea>
-                    <button type="submit" class="btn btn-primary">Gönder</button>
-                </form>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/adınızsoyadınız" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/kullanıcıadınız" target="_blank">GitHub</a>
-                    <a href="mailto:epostaadresiniz@example.com">E-posta</a>
-                </div>
-            </div>
-        </section>
+
+    
     </main>
 
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2025 Adınız Soyadınız. Tüm hakları saklıdır.</p>
+            <p>&copy; @DateTime.Now.Year Abdullah Arıcı</p>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
