@@ -4,738 +4,152 @@
 }
 
 <!DOCTYPE html>
-
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
- 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdullah Arıcı - Bilgisayar Mühendisi</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #64748b;
-            --success-color: #22c55e;
-            --warning-color: #f59e0b;
-            --light-bg: #f8fafc;
-            --white: #ffffff;
-            --text-dark: #1e293b;
-            --text-muted: #64748b;
-            --border-color: #e2e8f0;
-            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: #ffffff;
-        }
-
-        /* Navigation */
-        .navbar {
-            background-color: var(--white) !important;
-            box-shadow: var(--shadow);
-            padding: 1rem 0;
-        }
-
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary-color) !important;
-        }
-
-        .navbar-nav .nav-link {
-            color: var(--text-dark) !important;
-            font-weight: 500;
-            margin: 0 0.5rem;
-            padding: 0.5rem 1rem !important;
-            border-radius: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-            .navbar-nav .nav-link:hover {
-                color: var(--primary-color) !important;
-                background-color: var(--light-bg);
-            }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            padding: 2rem 0;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-description {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            max-width: 600px;
-        }
-
-        .btn-primary-custom {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 0.75rem 2rem;
-            font-weight: 600;
-            border-radius: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-            .btn-primary-custom:hover {
-                background-color: #1d4ed8;
-                border-color: #1d4ed8;
-                transform: translateY(-2px);
-                box-shadow: var(--shadow-lg);
-            }
-
-        .btn-outline-custom {
-            color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 0.75rem 2rem;
-            font-weight: 600;
-            border-radius: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-            .btn-outline-custom:hover {
-                background-color: var(--primary-color);
-                border-color: var(--primary-color);
-                color: white;
-                transform: translateY(-2px);
-            }
-
-        /* Sections */
-        .section {
-            padding: 5rem 0;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            color: var(--text-dark);
-            margin-bottom: 3rem;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* About Section */
-        .about {
-            background-color: var(--white);
-        }
-
-        .about-card {
-            background: var(--white);
-            border-radius: 1rem;
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-            height: 100%;
-            transition: all 0.3s ease;
-        }
-
-            .about-card:hover {
-                box-shadow: var(--shadow-lg);
-                transform: translateY(-5px);
-            }
-
-        .skill-item {
-            background: var(--white);
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-            .skill-item:hover {
-                box-shadow: var(--shadow-lg);
-                border-color: var(--primary-color);
-            }
-
-        .skill-icon {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .skill-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .skill-desc {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Projects Section */
-        .projects {
-            background-color: var(--light-bg);
-        }
-
-        .project-card {
-            background: var(--white);
-            border-radius: 1rem;
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-            height: 100%;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-            .project-card:hover {
-                box-shadow: var(--shadow-lg);
-                transform: translateY(-5px);
-                border-color: var(--primary-color);
-            }
-
-        .project-icon {
-            width: 4rem;
-            height: 4rem;
-            background-color: var(--primary-color);
-            border-radius: 0.75rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .project-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .project-desc {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tech-tag {
-            background-color: var(--light-bg);
-            color: var(--primary-color);
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: 1px solid var(--border-color);
-        }
-
-        /* Contact Section */
-        .contact {
-            background-color: var(--white);
-        }
-
-        .contact-card {
-            background: var(--white);
-            border-radius: 1rem;
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            background-color: var(--light-bg);
-            border-radius: 0.75rem;
-            transition: all 0.3s ease;
-        }
-
-            .contact-item:hover {
-                background-color: #e0f2fe;
-                transform: translateX(5px);
-            }
-
-        .contact-icon {
-            width: 3rem;
-            height: 3rem;
-            background-color: var(--primary-color);
-            border-radius: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1rem;
-            font-size: 1.1rem;
-            color: white;
-        }
-
-        .contact-title {
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 0.25rem;
-        }
-
-        .contact-text {
-            color: var(--text-muted);
-            margin: 0;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: var(--light-bg);
-            padding: 2rem 0;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-        }
-
-        .social-links {
-            margin-bottom: 1rem;
-        }
-
-        .social-link {
-            display: inline-block;
-            width: 3rem;
-            height: 3rem;
-            background-color: var(--white);
-            border-radius: 0.5rem;
-            margin: 0 0.5rem;
-            line-height: 3rem;
-            text-align: center;
-            color: var(--text-muted);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
-        }
-
-            .social-link:hover {
-                background-color: var(--primary-color);
-                color: white;
-                transform: translateY(-3px);
-                box-shadow: var(--shadow-lg);
-            }
-
-        /* Responsive Design */
-       
-
-        /* Smooth animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-            .fade-in.visible {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-        /* Simple loading animation */
-        .loading {
-            opacity: 0;
-            animation: fadeIn 0.5s ease forwards;
-        }
-
-      
-
-    </style>
-
-  
+    <title>Adınız Soyadınız - Profesyonel Portfolyo</title>
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
-<body class="loading">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+<body>
+    <header class="main-header">
         <div class="container">
-            <a class="navbar-brand" href="#home">Portföy</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Ana Sayfa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Hakkımda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projeler</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">İletişim</a>
-                    </li>
+            <nav class="main-nav">
+                <a href="#home" class="logo">Adınız Soyadınız</a>
+                <ul>
+                    <li><a href="#about">Hakkımda</a></li>
+                    <li><a href="#experience">Deneyim</a></li>
+                    <li><a href="#projects">Projeler</a></li>
+                    <li><a href="#skills">Yetenekler</a></li>
+                    <li><a href="#contact">İletişim</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <div class="hero-content">
-                        <h1 class="hero-title">Merhaba, Ben DENEME DENEME DEMENE</h1>
-                        <h2 class="hero-subtitle">Bilgisayar Mühendisi</h2>
-                        <p class="hero-description">
-                            Modern web teknolojileri ve yazılım geliştirme konularında çalışan bir mühendisim.
-                            Kullanıcı dostu ve etkili çözümler geliştirmeyi seviyorum.
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="#projects" class="btn btn-primary btn-primary-custom me-3">Projelerimi Gör</a>
-                            <a href="#contact" class="btn btn-outline-primary btn-outline-custom">İletişime Geç</a>
-                        </div>
-                    </div>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Merhaba, Ben [Adınız Soyadınız]</h1>
+                    <p>Ben bir [Mesleğiniz/Uzmanlık Alanınız]'ım ve [Kısa Tanıtım Cümlesi, örneğin: yenilikçi çözümler üretmeye odaklanıyorum.]</p>
+                    <a href="#projects" class="btn btn-primary">Projelerimi İncele</a>
                 </div>
-                <div class="col-lg-4">
-                    <div class="text-center">
-                        <i class="fas fa-laptop-code" style="font-size: 12rem; color: var(--primary-color); opacity: 0.1;"></i>
+            </div>
+        </section>
+
+        <section id="about" class="section-padding">
+            <div class="container">
+                <h2>Hakkımda</h2>
+                <div class="about-content">
+                    <img src="img/profile.jpg" alt="Profil Fotoğrafınız" class="profile-img">
+                    <p>Burada kendinizi tanıtabilirsiniz. Ne kadar süredir bu alanda çalıştığınızı, sizi neyin motive ettiğini, uzmanlık alanlarınızı ve kariyer hedeflerinizi detaylandırın. Örneğin: "Yaklaşık X yıldır yazılım geliştirme alanında çalışıyorum ve özellikle kullanıcı deneyimini iyileştiren, ölçeklenebilir ve etkili uygulamalar geliştirmeye tutkuyla bağlıyım. Web teknolojileri, mobil uygulamalar veya veri analizi gibi konularda uzmanım."</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section-padding bg-light">
+            <div class="container">
+                <h2>Deneyim</h2>
+                <div class="experience-list">
+                    <div class="experience-item">
+                        <h3>[Pozisyon Adı] - [Şirket Adı]</h3>
+                        <p class="experience-date">[Başlangıç Tarihi] - [Bitiş Tarihi]</p>
+                        <ul>
+                            <li>[Yapılan işin ilk maddesi ve sorumluluk]</li>
+                            <li>[Yapılan işin ikinci maddesi ve sorumluluk]</li>
+                            <li>[Önemli başarılar veya katkılar]</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>[Pozisyon Adı] - [Şirket Adı]</h3>
+                        <p class="experience-date">[Başlangıç Tarihi] - [Bitiş Tarihi]</p>
+                        <ul>
+                            <li>[Yapılan işin ilk maddesi ve sorumluluk]</li>
+                            <li>[Yapılan işin ikinci maddesi ve sorumluluk]</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <div class="container">
-            <h2 class="section-title">Hakkımda</h2>
-            <p class="section-subtitle">
-                Yazılım geliştirme tutkusu olan bir bilgisayar mühendisiyim.
-                Teknoloji ile hayatı kolaylaştırmayı hedefliyorum.
-            </p>
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="about-card fade-in">
-                        <h3 class="mb-4">Kimim</h3>
-                        <p class="text-muted mb-3">
-                            Yazılım geliştirme alanında deneyimli, sürekli öğrenmeye açık bir mühendisim.
-                            Modern teknolojileri kullanarak kullanıcı deneyimini ön planda tutan projeler geliştiriyorum.
-                        </p>
-                        <p class="text-muted">
-                            Takım çalışmasına yatkın, problem çözme becerileri gelişmiş ve
-                            sektöre değer katmayı hedefleyen bir profesyonelim.
-                        </p>
+        <section id="projects" class="section-padding">
+            <div class="container">
+                <h2>Projeler</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="img/project1.jpg" alt="Proje 1 Görseli">
+                        <h3>Proje Adı 1</h3>
+                        <p>Bu proje hakkında kısa bir açıklama. Hangi teknolojileri kullandığınızı ve projenin amacını belirtin.</p>
+                        <a href="#" class="btn btn-secondary">Detayları Gör</a>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="skill-item fade-in">
-                        <i class="fas fa-code skill-icon"></i>
-                        <h5 class="skill-title">Frontend Geliştirme</h5>
-                        <p class="skill-desc">React, Vue.js, HTML5, CSS3, JavaScript</p>
+                    <div class="project-card">
+                        <img src="img/project2.jpg" alt="Proje 2 Görseli">
+                        <h3>Proje Adı 2</h3>
+                        <p>Bu proje hakkında kısa bir açıklama. Hangi teknolojileri kullandığınızı ve projenin amacını belirtin.</p>
+                        <a href="#" class="btn btn-secondary">Detayları Gör</a>
                     </div>
-                    <div class="skill-item fade-in">
-                        <i class="fas fa-server skill-icon"></i>
-                        <h5 class="skill-title">Backend Geliştirme</h5>
-                        <p class="skill-desc">Node.js, Python, Java, .NET</p>
-                    </div>
-                    <div class="skill-item fade-in">
-                        <i class="fas fa-database skill-icon"></i>
-                        <h5 class="skill-title">Veritabanı Yönetimi</h5>
-                        <p class="skill-desc">MongoDB, PostgreSQL, MySQL</p>
-                    </div>
-                    <div class="skill-item fade-in">
-                        <i class="fas fa-cloud skill-icon"></i>
-                        <h5 class="skill-title">Cloud & DevOps</h5>
-                        <p class="skill-desc">AWS, Docker, Kubernetes, CI/CD</p>
+                    <div class="project-card">
+                        <img src="img/project3.jpg" alt="Proje 3 Görseli">
+                        <h3>Proje Adı 3</h3>
+                        <p>Bu proje hakkında kısa bir açıklama. Hangi teknolojileri kullandığınızı ve projenin amacını belirtin.</p>
+                        <a href="#" class="btn btn-secondary">Detayları Gör</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section projects">
-        <div class="container">
-            <h2 class="section-title">Projelerim</h2>
-            <p class="section-subtitle">
-                Geliştirdiğim bazı projeler. Her biri farklı teknolojiler kullanılarak oluşturulmuştur.
-            </p>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card fade-in">
-                        <div class="project-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <h4 class="project-title">E-Ticaret Platformu</h4>
-                        <p class="project-desc">
-                            Kullanıcı dostu arayüzü ile modern e-ticaret sitesi.
-                            Ödeme sistemi ve admin paneli dahil.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
+        <section id="skills" class="section-padding bg-light">
+            <div class="container">
+                <h2>Yetenekler</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h3>HTML5 & CSS3</h3>
+                        <p>Web standartlarına uygun, duyarlı ve modern arayüzler geliştirme.</p>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card fade-in">
-                        <div class="project-icon">
-                            <i class="fas fa-tasks"></i>
-                        </div>
-                        <h4 class="project-title">Proje Yönetim Sistemi</h4>
-                        <p class="project-desc">
-                            Takım çalışması için geliştirilmiş proje yönetim aracı.
-                            Görev takibi ve raporlama özellikleri.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                        </div>
+                    <div class="skill-item">
+                        <h3>JavaScript (ES6+)</h3>
+                        <p>Dinamik ve etkileşimli web uygulamaları oluşturma.</p>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card fade-in">
-                        <div class="project-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h4 class="project-title">Veri Analiz Dashboard</h4>
-                        <p class="project-desc">
-                            İş verilerini görselleştiren dashboard.
-                            Gerçek zamanlı raporlar ve analiz araçları.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">D3.js</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
+                    <div class="skill-item">
+                        <h3>[Yetenek Adı]</h3>
+                        <p>[Yetenek Açıklaması]</p>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card fade-in">
-                        <div class="project-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h4 class="project-title">Mobil Uygulama</h4>
-                        <p class="project-desc">
-                            Cross-platform mobil uygulama.
-                            iOS ve Android için optimize edilmiş performans.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Redux</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card fade-in">
-                        <div class="project-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h4 class="project-title">AI Sohbet Botu</h4>
-                        <p class="project-desc">
-                            Yapay zeka destekli sohbet botu.
-                            Doğal dil işleme ile akıllı yanıtlar.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">Flask</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card fade-in">
-                        <div class="project-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h4 class="project-title">Güvenlik Modülü</h4>
-                        <p class="project-desc">
-                            Web uygulamaları için güvenlik sistemi.
-                            Kimlik doğrulama ve yetkilendirme çözümleri.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">JWT</span>
-                            <span class="tech-tag">Redis</span>
-                        </div>
+                    <div class="skill-item">
+                        <h3>[Yetenek Adı]</h3>
+                        <p>[Yetenek Açıklaması]</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <h2 class="section-title">İletişim</h2>
-            <p class="section-subtitle">
-                Projeleriniz hakkında konuşalım. Size nasıl yardımcı olabileceğimi öğrenelim.
-            </p>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-card fade-in">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h5 class="contact-title">E-posta</h5>
-                                <p class="contact-text">abdullahaarici14@gmail.com</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div>
-                                <h5 class="contact-title">Telefon</h5>
-                                <p class="contact-text">+90 541 641 9410</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div>
-                                <h5 class="contact-title">LinkedIn</h5>
-                                <p class="contact-text">linkedin.com/in/profiliniz</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div>
-                                <h5 class="contact-title">GitHub</h5>
-                                <p class="contact-text">github.com/kullaniciadi</p>
-                            </div>
-                        </div>
-                    </div>
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <h2>İletişim</h2>
+                <p>Benimle iletişime geçmekten çekinmeyin!</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Adınız Soyadınız" required>
+                    <input type="email" placeholder="E-posta Adresiniz" required>
+                    <textarea placeholder="Mesajınız" rows="6" required></textarea>
+                    <button type="submit" class="btn btn-primary">Gönder</button>
+                </form>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/adınızsoyadınız" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/kullanıcıadınız" target="_blank">GitHub</a>
+                    <a href="mailto:epostaadresiniz@example.com">E-posta</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer class="main-footer">
         <div class="container">
-            <div class="social-links">
-                <a href="#" class="social-link">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="social-link">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="#" class="social-link">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-link">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-            <p class="text-muted">&copy; 2025 Adınız. Tüm hakları saklıdır.</p>
+            <p>&copy; 2025 Adınız Soyadınız. Tüm hakları saklıdır.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Simple fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all fade-in elements
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Navbar background on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            } else {
-                navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
-            }
-        });
-
-        // Simple loading animation
-        window.addEventListener('load', function() {
-            document.body.classList.add('loading');
-        });
-
-        // Project card click effect
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('click', function() {
-                this.style.transform = 'translateY(-5px) scale(0.98)';
-                setTimeout(() => {
-                    this.style.transform = 'translateY(-5px)';
-                }, 150);
-            });
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
